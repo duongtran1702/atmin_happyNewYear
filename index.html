@@ -2,6 +2,10 @@
 <html lang="vi">
     <head>
         <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <title>Chúc Mừng Năm Mới</title>
 
         <link
@@ -18,13 +22,15 @@
             }
 
             body {
-                height: 100vh;
+                min-height: 100vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background: linear-gradient(135deg, #ffd6e8, #d6e4ff);
-                overflow: hidden;
+                overflow-x: hidden;
+                overflow-y: auto;
                 position: relative;
+                padding: 24px 16px;
             }
 
             /* ===== Background Icons ===== */
@@ -84,7 +90,7 @@
 
             .title {
                 text-align: center;
-                font-size: 32px;
+                font-size: clamp(24px, 3vw, 32px);
                 font-weight: 700;
                 color: #ff4da6;
                 margin-bottom: 25px;
@@ -92,7 +98,7 @@
 
             .content {
                 line-height: 1.8;
-                font-size: 16px;
+                font-size: clamp(14px, 1.8vw, 16px);
                 color: #444;
             }
 
@@ -114,6 +120,7 @@
             .footer h2 {
                 color: #ff4da6;
                 margin-bottom: 10px;
+                font-size: clamp(18px, 2.4vw, 22px);
             }
 
             .signature {
@@ -192,6 +199,121 @@
                     transform: scale(0.96);
                 }
             }
+
+            /* ===== Responsive (Tablet & Mobile) ===== */
+            @media (max-width: 900px) {
+                .card {
+                    max-width: 100%;
+                }
+
+                .icon {
+                    font-size: 18px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding: 16px 10px;
+                }
+
+                .card {
+                    width: 100%;
+                    padding: 22px 16px 24px;
+                    border-radius: 20px;
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+                }
+
+                .content {
+                    font-size: 14px;
+                    line-height: 2;
+                }
+
+                .footer h2 {
+                    font-size: 18px;
+                }
+
+                .footer p,
+                .signature {
+                    font-size: 13px;
+                }
+
+                .corner-icon {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                }
+
+                .corner-icon.top-left {
+                    top: -10px;
+                    left: -10px;
+                }
+
+                .corner-icon.top-right {
+                    top: -10px;
+                    right: -10px;
+                }
+
+                .corner-icon.bottom-left {
+                    bottom: -10px;
+                    left: -10px;
+                }
+
+                .corner-icon.bottom-right {
+                    bottom: -10px;
+                    right: -10px;
+                }
+
+                .icon {
+                    font-size: 16px;
+                    opacity: 0.6;
+                }
+            }
+
+            /* Điện thoại rất nhỏ (≤ 380px) */
+            @media (max-width: 380px) {
+                .card {
+                    padding: 18px 12px 20px;
+                }
+
+                .content {
+                    font-size: 13px;
+                }
+
+                .footer h2 {
+                    font-size: 16px;
+                }
+
+                .footer p,
+                .signature {
+                    font-size: 12px;
+                }
+
+                .corner-icon {
+                    width: 34px;
+                    height: 34px;
+                    font-size: 16px;
+                }
+
+                .corner-icon.top-left {
+                    top: -6px;
+                    left: -6px;
+                }
+
+                .corner-icon.top-right {
+                    top: -6px;
+                    right: -6px;
+                }
+
+                .corner-icon.bottom-left {
+                    bottom: -6px;
+                    left: -6px;
+                }
+
+                .corner-icon.bottom-right {
+                    bottom: -6px;
+                    right: -6px;
+                }
+            }
         </style>
     </head>
 
@@ -210,14 +332,14 @@
             <div class="title">Gửi bạn 🌸</div>
 
             <div class="content">
-                Tui không biết năm mới này tụi mình sẽ trải qua những gì,<br />
-                nhưng tui biết một điều là…<br />
-                có bạn ở đó, mọi thứ chắc chắn sẽ vui hơn một chút.<br /><br />
+                Tui không biết năm mới này tụi mình sẽ trải qua những gì, nhưng
+                tui biết một điều là… có bạn ở đó, mọi thứ chắc chắn sẽ vui hơn
+                một chút.<br />
 
-                Mới quen nhau chưa quá lâu,<br />
-                nhưng nói chuyện với bạn lúc nào cũng thấy thoải mái.<br />
-                Hy vọng năm mới này tụi mình vẫn sẽ<br />
-                nói chuyện, trêu nhau và vui như bây giờ nha 😄<br /><br />
+                Mới quen nhau chưa quá lâu, nhưng nói chuyện với bạn lúc nào
+                cũng thấy thoải mái.<br />
+                Hy vọng năm mới này tụi mình vẫn sẽ nói chuyện, trêu nhau và vui
+                như bây giờ nha 😄<br />
 
                 Chúc bạn một năm mới thật nhiều may mắn,<br />
                 luôn vui vẻ và làm được điều mình thích ✨
@@ -227,7 +349,7 @@
 
             <div class="footer">
                 <h2>🎉 Happy New Year 🎉</h2>
-                <p>Chúc bạn năm mới an lành và hạnh phúc 🌸</p>
+                <p>Chúc bạn và gia đình năm mới an lành và hạnh phúc 🌸</p>
                 <div class="signature">— Từ người bạn của bạn 🌷</div>
             </div>
         </div>
@@ -255,7 +377,7 @@
                 '🥂',
                 '💐',
                 '🍬',
-            ]; 
+            ];
 
             function spawnIcon() {
                 const count = 2; // số icon tạo mỗi lần
