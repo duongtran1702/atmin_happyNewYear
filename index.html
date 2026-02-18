@@ -1,62 +1,125 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-        <title>Chúc Mừng Năm Mới</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gửi Huyền</title>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-        />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Be Vietnam Pro', sans-serif;
-            }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Be Vietnam Pro', sans-serif;
+    }
 
-            body {
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: linear-gradient(135deg, #ffd6e8, #d6e4ff);
-                overflow-x: hidden;
-                overflow-y: auto;
-                position: relative;
-                padding: 24px 16px;
-            }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffd6e8, #d6e4ff);
+      overflow: hidden;
+      position: relative;
+    }
 
-            /* ===== Background Icons ===== */
-            .bg-icons {
-                position: absolute;
-                inset: 0;
-                overflow: hidden;
-                z-index: 0; /* nằm sau */
-                pointer-events: none; /* không click trúng */
-            }
+    /* ===== Card ===== */
+    .card {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      padding: 40px 28px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 420px;
+      z-index: 2;
+      animation: fadeIn 1.2s ease;
+    }
 
-            .icon {
-                position: absolute;
-                font-size: 22px;
-                opacity: 0.7;
-                animation: floatRotate linear infinite;
-            }
+    .title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ff4d8d;
+      margin-bottom: 16px;
+    }
 
-            @keyframes floatRotate {
-                0% {
-                    transform: translateY(110vh) rotate(0deg) scale(0.6);
-                    opacity: 0;
-                }
-                20% {
-                    opacity: 0.8;
-                }
+    .text {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== Background Icons ===== */
+    .icon {
+      position: absolute;
+      font-size: 22px;
+      opacity: 0.7;
+      animation: float linear infinite;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      to {
+        transform: translateY(-10vh) rotate(360deg);
+      }
+    }
+
+    /* Random positions */
+    .icon:nth-child(1){ left:5%; animation-duration:18s; font-size:24px;}
+    .icon:nth-child(2){ left:15%; animation-duration:22s;}
+    .icon:nth-child(3){ left:25%; animation-duration:16s;}
+    .icon:nth-child(4){ left:35%; animation-duration:20s;}
+    .icon:nth-child(5){ left:45%; animation-duration:26s;}
+    .icon:nth-child(6){ left:55%; animation-duration:19s;}
+    .icon:nth-child(7){ left:65%; animation-duration:23s;}
+    .icon:nth-child(8){ left:75%; animation-duration:17s;}
+    .icon:nth-child(9){ left:85%; animation-duration:21s;}
+    .icon:nth-child(10){ left:95%; animation-duration:24s;}
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background icons -->
+  <div class="icon">💖</div>
+  <div class="icon">✨</div>
+  <div class="icon">💗</div>
+  <div class="icon">🌸</div>
+  <div class="icon">💫</div>
+  <div class="icon">💞</div>
+  <div class="icon">⭐</div>
+  <div class="icon">💕</div>
+  <div class="icon">🌷</div>
+  <div class="icon">💘</div>
+
+  <!-- Card -->
+  <div class="card">
+    <div class="title">Gửi Huyền 👀</div>
+
+    <div class="text">
+      Hơi ngại nhưng mà giờ Huyền còn muốn quen trai Bắc khum,<br>
+      nếu có cho bạn làm quen 😆
+    </div>
+  </div>
+
+</body>
+</html>                }
                 100% {
                     transform: translateY(-10vh) rotate(360deg) scale(1.2);
                     opacity: 0;
